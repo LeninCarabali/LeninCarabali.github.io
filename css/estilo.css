@@ -1,0 +1,165 @@
+
+body{
+    /*background-color: #caaf743a;*/
+    background-color: #d4ceced3;
+    padding: 0px;
+    margin: 0px;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenedor{
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    
+    grid-template-areas: "header header header"
+                         "main main sidebar"
+						 "footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .sidebar,
+.contenedor .footer {
+	background: rgb(138, 38, 38);
+	padding: 20px;
+}
+.contenedor .main{
+    background: rgba(255, 255, 255, 0);
+}
+
+
+
+.img{
+    background: #ffffff;
+    width: 370px;
+    height: 400px;
+    margin-left: 2%;
+    overflow: hidden;
+
+}
+
+.img img{
+    margin-top: 20px;
+    align-items: center;
+    width: 340px;
+    height: 360px;
+    margin-right: 0;
+    overflow: hidden;
+}
+
+
+.logo img{
+    width: 60px;
+    height: 60px;
+}
+
+
+.logo{
+    width: 60px;
+    height: 60px;
+    margin-left: 1%;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(12, 11, 11, 0.884);
+    position: initial;
+    left: 0;
+    top: 0;
+    width: 100%;
+    grid-area: header;
+    margin-top: 0;
+}
+
+.header ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header ul li{
+    display: inline-block;
+}
+
+.main ul li{
+    text-align: justify;
+}
+
+.header ul li a{
+    color: white;
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.header ul li a:hover{
+    background: rgb(138, 38, 38);
+}
+
+.item-r{
+    float: right;
+}
+
+.contenedor .sidebar {
+    grid-column: 3 / 4;
+    /*background:  #fAA43D;*/
+	background:  #ffffff00;
+	text-align: center;
+	align-items: center;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    min-height: 100px;
+	grid-area: sidebar;
+}
+
+.contenedor .main {
+    grid-area: main;
+    text-align: center;
+    justify-content: right;
+    font-family: 'Nunito', sans-serif;
+    min-height: 100px;
+    margin-right: 20%;
+
+    margin-left: 20%;
+    background-color: #ffffff00;
+}
+
+
+.contenedor .sidebar h4{
+    text-align: left;
+    font-size: 15px;
+    
+}
+
+.contenedor .sidebar h3{
+    text-align: left;
+    font-size: 18px;
+}
+
+
+.contenedor .footer {
+    grid-area: footer;
+    min-height: 1px;
+    
+}
+
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: "header header header"
+						 "contenido sidebar sidebar"
+						 "footer footer footer";
+	}
+}
